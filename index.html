@@ -3,82 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COMP3123 Full Quiz (JavaScript + Node.js + React)</title>
+<title>Spring Boot & Microservices Full Quiz</title>
 <style>
-  body { font-family: Arial, sans-serif; background: #f7f9fc; margin: 0; padding: 20px; }
-  h1, h2 { text-align: center; color: #222; }
-  .question { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 20px; }
+  h1 { text-align: center; color: #222; margin-bottom: 25px; }
+  .question { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
   .question h3 { margin-bottom: 10px; }
   label { display: block; margin-bottom: 5px; }
   button { background: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
   button:hover { background: #0056b3; }
-  .correct { background-color: #d4edda; color: #155724; padding: 8px; border-radius: 5px; margin-top: 8px; }
-  .incorrect { background-color: #f8d7da; color: #721c24; padding: 8px; border-radius: 5px; margin-top: 8px; }
+  .correct { background: #d4edda; color: #155724; padding: 8px; border-radius: 5px; margin-top: 8px; }
+  .incorrect { background: #f8d7da; color: #721c24; padding: 8px; border-radius: 5px; margin-top: 8px; }
   #score { text-align: center; font-size: 1.3em; font-weight: bold; margin-top: 25px; }
 </style>
 </head>
 <body>
 
-<h1>COMP3123 – Full JavaScript + Node.js + React Quiz</h1>
+<h1>Spring Boot, REST Services, and JPA – Comprehensive Quiz</h1>
 <div id="quiz"></div>
 <div id="score"></div>
 
 <script>
 const quizData = [
-  // === ES6 / JavaScript Basics ===
-  { question: "ECMAScript 2015 is also known as ES6 and ECMAScript 6?", options: ["False", "True"], correct: 1 },
-  { question: "What is the main advantage of using let and const over var in ES6?", options: ["They both hoist variables like var", "let and const are function-scoped, like var", "They provide block-scoping, reducing accidental global variables", "They both can be redeclared in the same scope"], correct: 2 },
-  { question: "What does the map() function return in JavaScript?", options: ["A new array with transformed elements", "A single value resulting from a computation", "A string representation of the array", "The same array passed to it"], correct: 0 },
-  { question: "How does the arrow function syntax differ from regular function expressions in JavaScript?", options: ["Arrow functions can be used only with arrays", "Arrow functions can only be used in loops", "Arrow functions must have a return statement", "Arrow functions do not bind their own 'this' value"], correct: 3 },
-  { question: "Which statement correctly defines a class in JavaScript?", options: ["function MyClass() {}", "class MyClass { constructor() {} }", "new Class(MyClass)", "var MyClass = class() {}"], correct: 1 },
-  { question: "JavaScript Classes are templates for JavaScript Objects?", options: ["True", "False"], correct: 0 },
-  { question: "Which keyword is used to call the parent class constructor in JavaScript classes?", options: ["this", "parent", "super", "base"], correct: 2 },
-  { question: "Which of the following is not true about arrow functions in JavaScript?", options: ["Arrow functions do not have their own this context", "Arrow functions are more concise than regular functions", "Arrow functions can be used as constructors", "Arrow functions do not have an arguments object"], correct: 2 },
-  { question: "Which of the following is the correct way to write an arrow function that returns the square of a number?", options: ["const square = (x) => { return x * x; }", "const square = (x) => x * x;", "const square = x => x * x;", "All of the given options"], correct: 3 },
-  { question: "_____ functions allow a short syntax for writing function expressions.", options: ["Expression", "Static", "Super", "Arrow"], correct: 3 },
+  // === LESSON 1.2 – INTRO TO MICROSERVICES ===
+  { question: "What is a microservice?", options: ["A small UI component", "A small, independently deployable service focused on a specific business capability", "A Java class", "A REST endpoint"], correct: 1 },
+  { question: "Which of the following is an advantage of microservices?", options: ["Tight coupling between services", "Single point of failure", "Scalability and independent deployment", "Harder maintenance"], correct: 2 },
+  { question: "Spring Boot helps in building microservices by providing:", options: ["Manual configuration", "Embedded servers and auto-configuration", "Multiple WAR deployments", "None of the above"], correct: 1 },
+  { question: "Which embedded servers are commonly supported in Spring Boot?", options: ["Tomcat, Jetty, Undertow", "Apache, Nginx, IIS", "Wildfly, Glassfish", "All of the above"], correct: 0 },
+  { question: "Which annotation is used to mark a Spring Boot main class?", options: ["@BootApplication", "@SpringBootApplication", "@EnableSpring", "@Configuration"], correct: 1 },
+  { question: "In a microservices architecture, each service:", options: ["Shares the same database", "Has its own database", "Depends on a single database", "Cannot use a database"], correct: 1 },
+  { question: "The main purpose of Spring Boot Actuator is:", options: ["Testing REST APIs", "Monitoring and managing applications", "Database connection", "Securing REST endpoints"], correct: 1 },
+  { question: "Which dependency manager is used with Spring Boot?", options: ["Gradle/Maven", "NPM", "Composer", "Makefile"], correct: 0 },
+  { question: "Which annotation automatically scans and registers beans?", options: ["@Autowired", "@ComponentScan", "@Controller", "@Bean"], correct: 1 },
+  { question: "Spring Boot starters are used to:", options: ["Define manual dependencies", "Simplify dependency management", "Disable auto-configuration", "Add extra plugins"], correct: 1 },
 
-  // === Promises / Async / Callbacks ===
-  { question: "The meaning for Augmenting classes is that ________", options: ["objects inherit prototype properties only in a dynamic state", "objects inherit prototype properties in the static state", "object doesn't inherit prototype properties in the static state", "objects inherit prototype properties even in a dynamic state"], correct: 3 },
-  { question: "A Promise object is in '________' state if the result is undefined.", options: ["rejected", "none of above", "resolved", "pending"], correct: 3 },
-  { question: "Arrow functions do not have their own ________.", options: ["All of the mentioned", "this", "prototype", "arguments"], correct: 0 },
-  { question: "How can you chain multiple asynchronous operations with Promises?", options: ["Using multiple .then() methods", "Using the async keyword", "Using nested Promises", "By passing an array of Promises"], correct: 0 },
-  { question: "What is the output of: const myPromise = Promise.resolve('Woah some cool data'); (async()=>{try{console.log(await myPromise);}catch{throw new Error('Oops');}finally{console.log('Oh finally!');}})();", options: ["Woah some cool data", "Oh finally!", "Woah some cool data Oh finally!", "Oops didn't work Oh finally!"], correct: 2 },
-  { question: "The function passed to new Promise is called the ________.", options: ["Arrow", "fulfilled", "executor", "resolver"], correct: 2 },
-  { question: "What is the await keyword used for in async functions?", options: ["To create a new Promise", "To pause the execution of the async function until a Promise settles", "To repeat an asynchronous operation", "To automatically catch errors"], correct: 1 },
-  { question: "A ______ is a function passed as an argument to another function.", options: ["lambda", "promise", "arrow", "callback"], correct: 3 },
-  { question: "What is the async keyword used for in JavaScript?", options: ["To declare an asynchronous function", "To make a function return a Promise", "To pause the execution of a function", "Both a and b"], correct: 3 },
-  { question: "What method is used to specify the code to execute after a Promise is fulfilled?", options: [".finally()", ".catch()", ".then()", ".done()"], correct: 2 },
+  // === LESSON 2.1 – REST SERVICES ===
+  { question: "REST stands for:", options: ["Representational State Transfer", "Representational Service Transfer", "Remote Service Technology", "Reliable Service Transmission"], correct: 0 },
+  { question: "Which HTTP method is idempotent and used to retrieve data?", options: ["POST", "PUT", "GET", "PATCH"], correct: 2 },
+  { question: "Which HTTP status code means 'Created'?", options: ["200", "201", "202", "204"], correct: 1 },
+  { question: "Which annotation in Spring Boot maps HTTP requests to handler methods?", options: ["@Mapping", "@RestController", "@RequestMapping", "@GetMapping"], correct: 2 },
+  { question: "The @RestController annotation is a combination of:", options: ["@Controller + @Service", "@Controller + @ResponseBody", "@Component + @RequestBody", "@Repository + @ResponseBody"], correct: 1 },
+  { question: "Which of the following is NOT a REST constraint?", options: ["Client-Server", "Stateless", "Cacheable", "Server-dependent state"], correct: 3 },
+  { question: "Which annotation maps a GET request to a method?", options: ["@PostMapping", "@GetMapping", "@RequestParam", "@PutMapping"], correct: 1 },
+  { question: "What does @PathVariable do in Spring Boot?", options: ["Maps URL segments to method parameters", "Reads JSON body data", "Injects a service", "Validates input fields"], correct: 0 },
+  { question: "What is the purpose of ResponseEntity?", options: ["To set HTTP status and headers explicitly", "To log requests", "To cache responses", "To validate payloads"], correct: 0 },
+  { question: "Which of the following describes API Versioning?", options: ["Running multiple servers", "Changing database schema", "Maintaining multiple versions of an API for compatibility", "Updating frontend design"], correct: 2 },
+  { question: "What is the role of WebClient in Spring Boot?", options: ["Makes HTTP calls to other services", "Stores data in database", "Creates entities", "Generates frontend views"], correct: 0 },
+  { question: "Which Spring Boot annotation is used for exception handling in REST APIs?", options: ["@ExceptionHandler", "@ErrorMapping", "@Catch", "@RestError"], correct: 0 },
+  { question: "Which HTTP status code means 'No Content'?", options: ["201", "202", "204", "400"], correct: 2 },
+  { question: "Which HTTP method is used for updating an existing resource?", options: ["POST", "PUT", "GET", "DELETE"], correct: 1 },
+  { question: "Which HTTP method removes a resource?", options: ["POST", "DELETE", "PATCH", "HEAD"], correct: 1 },
 
-  // === Node.js Fundamentals ===
-  { question: "Which extension is used to save Node.js files?", options: [".node", ".njs", ".js", ".nodejs"], correct: 2 },
-  { question: "In semantic versioning, what does the second number represent?", options: ["Build number", "Major changes", "Patches", "Minor changes"], correct: 3 },
-  { question: "Which of the following statements is true about callbacks in Node.js?", options: ["Callbacks cannot be used with asynchronous functions", "All functions in Node.js are callbacks", "Callbacks are synchronous by default", "Callbacks can lead to callback hell"], correct: 3 },
-  { question: "An ______ is a convenient way to bundle common shell commands like a set of built-in and custom scripts for your node project.", options: ["npm script", "node script", "shell script", "All of them"], correct: 0 },
-  { question: "Node.js is ________", options: ["Asynchronous", "Synchronous", "Both A and B", "None of A and B"], correct: 0 },
-  { question: "Which of the following is true about the global object in Node.js?", options: ["It includes variables like setTimeout and console", "It is only accessible in the main module", "It behaves the same as the global object in the browser", "It cannot be modified"], correct: 0 },
-  { question: "What is Callback?", options: ["The callback is a technique in which a method calls back the caller method.", "The callback is an asynchronous equivalent for a function.", "Both A and B", "None of the above."], correct: 3 },
-  { question: "What does __dirname represent in Node.js?", options: ["The name of the global directory", "The name of the current directory of the executing script", "The directory where the Node.js binary is located", "The name of the home directory"], correct: 1 },
-  { question: "What is Node.js primarily used for?", options: ["Designing user interfaces", "Database management", "Client-side scripting", "Building scalable network applications"], correct: 3 },
-  { question: "What is the default scope in the Node.js application?", options: ["Global", "Local", "Local to object", "Global Function"], correct: 1 },
-
-  // === Node.js Advanced / Part 2 ===
-  { question: "Simple or complex functionality organized in single or multiple JavaScript files that can be reused throughout your Node.js application is called _____.", options: ["require", "library", "module", "package"], correct: 2 },
-  { question: "Which of the following template engines can be used with Node.js?", options: ["Vash", "All of the given options", "Pug", "Jade"], correct: 1 },
-  { question: "Which of the following are web application frameworks for Node.js?", options: ["Geddy", "All of the given options", "Express.js", "Locomotive"], correct: 1 },
-  { question: "Which of the following class is used to create and consume custom events in Node.js?", options: ["EventEmitter", "None of the given options", "EventsEmitters", "Events"], correct: 0 },
-  { question: "Which of the following core module is used to create a web server in Node.js?", options: ["createserver", "http", "express", "httpserver"], correct: 1 },
-
-  // === React.js ===
-  { question: "What are the two ways that data gets handled in React?", options: ["class and function", "services & components", "state & props", "let and var"], correct: 2 },
-  { question: "What is the name of React.js developer and organization?", options: ["Tim Lee and Apple", "Jordan Walke and Twitter", "Jordan Walke and Facebook", "Jordan Lee and Facebook"], correct: 2 },
-  { question: "Props are ______ into other components.", options: ["Methods", "Injected", "Both A & B", "None of the given options"], correct: 1 },
-  { question: "ReactJS uses _____ to increase performance.", options: ["Original DOM", "Virtual DOM", "Both A & B", "None of the given options"], correct: 1 },
-  { question: "React.js covers only the view layer of the app.", options: ["True", "False"], correct: 0 },
-  { question: "In React what is used to pass data to a component from outside?", options: ["setState", "PropTypes", "render with arguments", "props"], correct: 3 },
-  { question: "What is Babel?", options: ["An interpreter", "A Compiler", "A transpiler", "Both Compiler and transpiler"], correct: 2 },
-  { question: "What is state in React?", options: ["A persistant storage", "An internal data store (object) of a component.", "None of the given options", "variable"], correct: 1 },
-  { question: "Everything in React is a ________.", options: ["Package", "Module", "Component", "Class"], correct: 2 },
-  { question: "What is ReactJS?", options: ["None of the given options", "User-interface framework", "Server side Framework", "A Library for building interaction interfaces"], correct: 3 },
+  // === LECTURE 3.1 – JPA / ORM ===
+  { question: "JPA stands for:", options: ["Java Programming Architecture", "Java Persistence API", "Java Persistence Application", "Java Persistence Access"], correct: 1 },
+  { question: "What is the purpose of ORM?", options: ["Optimizing response methods", "Mapping objects to relational tables", "Organizing runtime memory", "Managing API routes"], correct: 1 },
+  { question: "Which annotation marks a class as a JPA entity?", options: ["@Entity", "@Table", "@Column", "@Persistence"], correct: 0 },
+  { question: "The @Id annotation is used for:", options: ["Primary key mapping", "Foreign key mapping", "Timestamping", "Auto wiring beans"], correct: 0 },
+  { question: "Which annotation is used to generate automatic IDs?", options: ["@GeneratedValue", "@Sequence", "@PrimaryKey", "@Auto"], correct: 0 },
+  { question: "What does the @OneToMany annotation define?", options: ["A many-to-many relationship", "A one-to-many relationship between entities", "A mapping of entity to database", "A one-to-one relation"], correct: 1 },
+  { question: "Which interface provides basic CRUD operations in JPA?", options: ["JpaRepository", "CrudOperations", "DataRepository", "EntityManager"], correct: 0 },
+  { question: "The @Column annotation is used to:", options: ["Rename entity class", "Map a field to a specific column name", "Define a relationship", "Enable validation"], correct: 1 },
+  { question: "What is the function of @Table annotation?", options: ["Specifies the table name for the entity", "Defines entity ID", "Creates database schema", "Defines column mapping"], correct: 0 },
+  { question: "What does EntityManager do in JPA?", options: ["Handles UI rendering", "Manages entity lifecycle and database operations", "Executes SQL directly", "Registers Spring Beans"], correct: 1 },
+  { question: "What does the term 'persistence context' mean?", options: ["A runtime environment that manages entity instances", "A static configuration file", "The caching mechanism only", "A temporary database"], correct: 0 },
+  { question: "Which annotation establishes a foreign key relationship?", options: ["@JoinColumn", "@ForeignKey", "@LinkTable", "@RelatedColumn"], correct: 0 },
+  { question: "What is lazy loading in JPA?", options: ["Loading all data eagerly", "Fetching related entities only when needed", "Deleting unused data", "Caching records on startup"], correct: 1 },
+  { question: "Which Spring annotation is used to mark a data repository?", options: ["@Repository", "@DataSource", "@DAO", "@Entity"], correct: 0 },
+  { question: "Which of the following handles transaction boundaries?", options: ["@Transactional", "@Service", "@Controller", "@Persistence"], correct: 0 }
 ];
 
 const quizContainer = document.getElementById("quiz");
