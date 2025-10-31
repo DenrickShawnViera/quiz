@@ -3,73 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spring Boot & Microservices Full Quiz</title>
+<title>Python, NumPy, Pandas, Matplotlib & Machine Learning – Comprehensive Quiz</title>
 <style>
-  body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 20px; }
-  h1 { text-align: center; color: #222; margin-bottom: 25px; }
-  .question { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  .question h3 { margin-bottom: 10px; }
-  label { display: block; margin-bottom: 5px; }
-  button { background: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
-  button:hover { background: #0056b3; }
-  .correct { background: #d4edda; color: #155724; padding: 8px; border-radius: 5px; margin-top: 8px; }
-  .incorrect { background: #f8d7da; color: #721c24; padding: 8px; border-radius: 5px; margin-top: 8px; }
-  #score { text-align: center; font-size: 1.3em; font-weight: bold; margin-top: 25px; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #f0f6fc;
+    margin: 0;
+    padding: 20px;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #58a6ff;
+  }
+  p.subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #9ca3af;
+    margin-bottom: 30px;
+  }
+  .question {
+    background: #161b22;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .question h3 {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+  button {
+    background: #1f6feb;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover {
+    background: #388bfd;
+  }
+  .correct {
+    background: #238636;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 8px;
+  }
+  .incorrect {
+    background: #da3633;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 8px;
+  }
+  #score {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #9ca3af;
+    font-size: 0.9em;
+  }
 </style>
 </head>
 <body>
 
-<h1>Spring Boot, REST Services, and JPA – Comprehensive Quiz</h1>
+<h1>Python, NumPy, Pandas, Matplotlib & Machine Learning – Comprehensive Quiz</h1>
+<p class="subtitle">Covers topics from lectures, exercises, and lab assignments (Weeks 3–7)</p>
+
 <div id="quiz"></div>
 <div id="score"></div>
 
+<footer>Created by Denrick Shawn Viera</footer>
+
 <script>
 const quizData = [
-  // === LESSON 1.2 – INTRO TO MICROSERVICES ===
-  { question: "What is a microservice?", options: ["A small UI component", "A small, independently deployable service focused on a specific business capability", "A Java class", "A REST endpoint"], correct: 1 },
-  { question: "Which of the following is an advantage of microservices?", options: ["Tight coupling between services", "Single point of failure", "Scalability and independent deployment", "Harder maintenance"], correct: 2 },
-  { question: "Spring Boot helps in building microservices by providing:", options: ["Manual configuration", "Embedded servers and auto-configuration", "Multiple WAR deployments", "None of the above"], correct: 1 },
-  { question: "Which embedded servers are commonly supported in Spring Boot?", options: ["Tomcat, Jetty, Undertow", "Apache, Nginx, IIS", "Wildfly, Glassfish", "All of the above"], correct: 0 },
-  { question: "Which annotation is used to mark a Spring Boot main class?", options: ["@BootApplication", "@SpringBootApplication", "@EnableSpring", "@Configuration"], correct: 1 },
-  { question: "In a microservices architecture, each service:", options: ["Shares the same database", "Has its own database", "Depends on a single database", "Cannot use a database"], correct: 1 },
-  { question: "The main purpose of Spring Boot Actuator is:", options: ["Testing REST APIs", "Monitoring and managing applications", "Database connection", "Securing REST endpoints"], correct: 1 },
-  { question: "Which dependency manager is used with Spring Boot?", options: ["Gradle/Maven", "NPM", "Composer", "Makefile"], correct: 0 },
-  { question: "Which annotation automatically scans and registers beans?", options: ["@Autowired", "@ComponentScan", "@Controller", "@Bean"], correct: 1 },
-  { question: "Spring Boot starters are used to:", options: ["Define manual dependencies", "Simplify dependency management", "Disable auto-configuration", "Add extra plugins"], correct: 1 },
+  // === PYTHON / ML QUESTIONS (20) ===
+  { question: "Question 1 (1 point) – Listen<br>What is a DataFrame?", options: ["A datatype in Python, but unlike a multidimensional array it is specifically a 2D data type (table-like)", "A datatype in Python, but unlike a multidimensional array it is specifically a 1D data type (row-like)", "A datatype in Python, but it is not as memory-efficient or processor-efficient as a Python array", "A datatype in Python, but it is not as memory-efficient or processor-efficient as a Python list"], correct: 0 },
+  { question: "Question 2 (1 point) – Listen<br>What does print(df.describe()) give us?", options: ["Prints the dataframe neatly", "Statistical calculations about the columns", "Number of rows and columns", "Description of how data was collected"], correct: 1 },
+  { question: "Question 3 (1 point) – Listen<br>What does df = df.dropna(subset=['spin_rate', 'temperature']) do?", options: ["Deletes entire dataframe", "Deletes rows with missing values in those columns", "Deletes columns that have missing values", "Drops any empty rows"], correct: 1 },
+  { question: "Question 4 (1 point) – Listen<br>What does print(df[df['weight'] < 3000]) show?", options: ["All rows and columns where weight < 3000", "Only the id column", "All columns where weight = 3000", "Entire dataframe"], correct: 0 },
+  { question: "Question 5 (1 point) – Listen<br>What is involved in calculating accuracy metric?", options: ["Difference between predicted and true label", "Mean minus median", "Correct predictions divided by total predictions", "Multiplication of predicted and true label"], correct: 2 },
+  { question: "Question 6 (1 point) – Listen<br>What is true about pandas DataFrame vs numpy array?", options: ["DataFrame represents 2D table, like database or CSV", "DataFrame is faster in all situations", "DataFrame is multidimensional (25D)", "DataFrame cannot hold string data"], correct: 0 },
+  { question: "Question 7 (1 point) – Listen<br>What does df.loc['row1', ['col1','col2']] return?", options: ["Single value", "Single row but multiple columns", "Single column but multiple rows", "Entire dataframe"], correct: 1 },
+  { question: "Question 8 (1 point) – Listen<br>Which function loads a CSV file?", options: ["pd.load_csv()", "pd.open()", "pd.read_csv()", "pd.csv_import()"], correct: 2 },
+  { question: "Question 9 (1 point) – Listen<br>Which library is primarily used for numerical computation?", options: ["pandas", "matplotlib", "numpy", "seaborn"], correct: 2 },
+  { question: "Question 10 (1 point) – Listen<br>Which library provides data visualization tools?", options: ["numpy", "seaborn", "pandas", "matplotlib"], correct: 3 },
+  { question: "Question 11 (1 point) – Listen<br>Which metric evaluates classification performance?", options: ["Accuracy", "Variance", "Median", "Deviation"], correct: 0 },
+  { question: "Question 12 (1 point) – Listen<br>Which keyword creates a function in Python?", options: ["func", "def", "method", "lambda"], correct: 1 },
+  { question: "Question 13 (1 point) – Listen<br>Which method fills missing data in pandas?", options: ["fillna()", "dropna()", "replace()", "concat()"], correct: 0 },
+  { question: "Question 14 (1 point) – Listen<br>What does plt.show() do in matplotlib?", options: ["Displays the plot window", "Saves the plot", "Clears the figure", "Displays data as table"], correct: 0 },
+  { question: "Question 15 (1 point) – Listen<br>What is the purpose of plt.xlabel()?", options: ["Adds a title", "Adds a label to X-axis", "Displays a legend", "Adds a grid"], correct: 1 },
+  { question: "Question 16 (1 point) – Listen<br>Which of the following is NOT a Python data type?", options: ["Tuple", "List", "Character", "Dictionary"], correct: 2 },
+  { question: "Question 17 (1 point) – Listen<br>What is the file format typically used for training data?", options: ["HTML", "CSV", "MP3", "JPG"], correct: 1 },
+  { question: "Question 18 (1 point) – Listen<br>Which statement about machine learning is true?", options: ["It learns patterns from data", "It only works on numeric data", "It cannot make predictions", "It doesn’t require data"], correct: 0 },
+  { question: "Question 19 (1 point) – Listen<br>Which algorithm is a classification algorithm?", options: ["KNN", "Linear Regression", "PCA", "K-Means"], correct: 0 },
+  { question: "Question 20 (1 point) – Listen<br>What is supervised learning?", options: ["Model learns from labeled data", "Model learns from unlabeled data", "Model runs without training", "Model uses clustering"], correct: 0 },
 
-  // === LESSON 2.1 – REST SERVICES ===
-  { question: "REST stands for:", options: ["Representational State Transfer", "Representational Service Transfer", "Remote Service Technology", "Reliable Service Transmission"], correct: 0 },
-  { question: "Which HTTP method is idempotent and used to retrieve data?", options: ["POST", "PUT", "GET", "PATCH"], correct: 2 },
-  { question: "Which HTTP status code means 'Created'?", options: ["200", "201", "202", "204"], correct: 1 },
-  { question: "Which annotation in Spring Boot maps HTTP requests to handler methods?", options: ["@Mapping", "@RestController", "@RequestMapping", "@GetMapping"], correct: 2 },
-  { question: "The @RestController annotation is a combination of:", options: ["@Controller + @Service", "@Controller + @ResponseBody", "@Component + @RequestBody", "@Repository + @ResponseBody"], correct: 1 },
-  { question: "Which of the following is NOT a REST constraint?", options: ["Client-Server", "Stateless", "Cacheable", "Server-dependent state"], correct: 3 },
-  { question: "Which annotation maps a GET request to a method?", options: ["@PostMapping", "@GetMapping", "@RequestParam", "@PutMapping"], correct: 1 },
-  { question: "What does @PathVariable do in Spring Boot?", options: ["Maps URL segments to method parameters", "Reads JSON body data", "Injects a service", "Validates input fields"], correct: 0 },
-  { question: "What is the purpose of ResponseEntity?", options: ["To set HTTP status and headers explicitly", "To log requests", "To cache responses", "To validate payloads"], correct: 0 },
-  { question: "Which of the following describes API Versioning?", options: ["Running multiple servers", "Changing database schema", "Maintaining multiple versions of an API for compatibility", "Updating frontend design"], correct: 2 },
-  { question: "What is the role of WebClient in Spring Boot?", options: ["Makes HTTP calls to other services", "Stores data in database", "Creates entities", "Generates frontend views"], correct: 0 },
-  { question: "Which Spring Boot annotation is used for exception handling in REST APIs?", options: ["@ExceptionHandler", "@ErrorMapping", "@Catch", "@RestError"], correct: 0 },
-  { question: "Which HTTP status code means 'No Content'?", options: ["201", "202", "204", "400"], correct: 2 },
-  { question: "Which HTTP method is used for updating an existing resource?", options: ["POST", "PUT", "GET", "DELETE"], correct: 1 },
-  { question: "Which HTTP method removes a resource?", options: ["POST", "DELETE", "PATCH", "HEAD"], correct: 1 },
-
-  // === LECTURE 3.1 – JPA / ORM ===
-  { question: "JPA stands for:", options: ["Java Programming Architecture", "Java Persistence API", "Java Persistence Application", "Java Persistence Access"], correct: 1 },
-  { question: "What is the purpose of ORM?", options: ["Optimizing response methods", "Mapping objects to relational tables", "Organizing runtime memory", "Managing API routes"], correct: 1 },
-  { question: "Which annotation marks a class as a JPA entity?", options: ["@Entity", "@Table", "@Column", "@Persistence"], correct: 0 },
-  { question: "The @Id annotation is used for:", options: ["Primary key mapping", "Foreign key mapping", "Timestamping", "Auto wiring beans"], correct: 0 },
-  { question: "Which annotation is used to generate automatic IDs?", options: ["@GeneratedValue", "@Sequence", "@PrimaryKey", "@Auto"], correct: 0 },
-  { question: "What does the @OneToMany annotation define?", options: ["A many-to-many relationship", "A one-to-many relationship between entities", "A mapping of entity to database", "A one-to-one relation"], correct: 1 },
-  { question: "Which interface provides basic CRUD operations in JPA?", options: ["JpaRepository", "CrudOperations", "DataRepository", "EntityManager"], correct: 0 },
-  { question: "The @Column annotation is used to:", options: ["Rename entity class", "Map a field to a specific column name", "Define a relationship", "Enable validation"], correct: 1 },
-  { question: "What is the function of @Table annotation?", options: ["Specifies the table name for the entity", "Defines entity ID", "Creates database schema", "Defines column mapping"], correct: 0 },
-  { question: "What does EntityManager do in JPA?", options: ["Handles UI rendering", "Manages entity lifecycle and database operations", "Executes SQL directly", "Registers Spring Beans"], correct: 1 },
-  { question: "What does the term 'persistence context' mean?", options: ["A runtime environment that manages entity instances", "A static configuration file", "The caching mechanism only", "A temporary database"], correct: 0 },
-  { question: "Which annotation establishes a foreign key relationship?", options: ["@JoinColumn", "@ForeignKey", "@LinkTable", "@RelatedColumn"], correct: 0 },
-  { question: "What is lazy loading in JPA?", options: ["Loading all data eagerly", "Fetching related entities only when needed", "Deleting unused data", "Caching records on startup"], correct: 1 },
-  { question: "Which Spring annotation is used to mark a data repository?", options: ["@Repository", "@DataSource", "@DAO", "@Entity"], correct: 0 },
-  { question: "Which of the following handles transaction boundaries?", options: ["@Transactional", "@Service", "@Controller", "@Persistence"], correct: 0 }
+  // === 🧪 LAB-BASED QUESTIONS (LABS 3–7) ===
+  { question: "Lab 3 – What does pd.read_csv() do?", options: ["Reads Excel files", "Reads CSV files into a DataFrame", "Deletes a CSV file", "Converts DataFrame to CSV"], correct: 1 },
+  { question: "Lab 3 – What does df.dropna() do?", options: ["Removes columns", "Drops missing values", "Adds a column", "Sorts the DataFrame"], correct: 1 },
+  { question: "Lab 3 – Which command accesses a specific column?", options: ["df.column_name", "df['column_name']", "Both A and B", "df(column_name)"], correct: 2 },
+  { question: "Lab 4 – What does df.describe() provide?", options: ["Column statistics", "File name", "Data types only", "Row names"], correct: 0 },
+  { question: "Lab 4 – Which plot best shows value distribution?", options: ["Scatter", "Bar", "Histogram", "Pie"], correct: 2 },
+  { question: "Lab 5 – What is plt.title() used for?", options: ["Adds a subtitle", "Adds a title to plot", "Sets figure size", "Adds legend"], correct: 1 },
+  { question: "Lab 5 – What does plt.legend() do?", options: ["Adds color", "Adds labels for plotted data", "Shows grid lines", "Removes axes"], correct: 1 },
+  { question: "Lab 5 – Which line displays a figure?", options: ["plt.display()", "plt.show()", "plt.view()", "plt.output()"], correct: 1 },
+  { question: "Lab 7 – What does KNN stand for?", options: ["K-Nearest Neighbors", "Kernel Neural Network", "Key Node Network", "Knowledge Node Neighbor"], correct: 0 },
+  { question: "Lab 7 – What does KNN use to classify data?", options: ["Nearest data points", "Random selection", "Gradient descent", "Neural layers"], correct: 0 },
+  { question: "Lab 7 – What does 'k' represent in KNN?", options: ["Number of clusters", "Number of neighbors", "Number of classes", "Number of epochs"], correct: 1 },
+  { question: "Lab 7 – Which distance metric is commonly used?", options: ["Cosine similarity", "Euclidean distance", "Manhattan norm", "Sigmoid function"], correct: 1 },
+  { question: "Lab 7 – How do you evaluate KNN performance?", options: ["Confusion matrix", "Accuracy score", "Precision-Recall", "All of the above"], correct: 3 },
+  { question: "Lab 7 – What does higher 'k' typically cause?", options: ["Less noise, smoother boundary", "More overfitting", "No change", "More errors"], correct: 0 },
+  { question: "Lab 7 – What Python function evaluates accuracy?", options: ["accuracy_score()", "predict_score()", "model_accuracy()", "evaluate()"], correct: 0 },
+  { question: "Lab 7 – What happens if k = 1?", options: ["Classifies based on one nearest neighbor", "Uses random guess", "No prediction made", "Takes mean of all points"], correct: 0 },
+  { question: "Lab 7 – What is the formula for accuracy?", options: ["(Correct / Total) * 100", "(Total / Correct) * 100", "(Wrong / Total) * 100", "(Correct - Wrong) / Total"], correct: 0 },
+  { question: "Lab 7 – Which library implements KNN in Python?", options: ["sklearn", "matplotlib", "numpy", "tensorflow"], correct: 0 },
+  { question: "Lab 7 – What does model.fit() do?", options: ["Trains model", "Tests model", "Predicts outcomes", "Visualizes data"], correct: 0 },
+  { question: "Lab 7 – What does model.predict() return?", options: ["True labels", "Predicted labels", "Training data", "Loss value"], correct: 1 }
 ];
 
 const quizContainer = document.getElementById("quiz");
@@ -78,7 +140,7 @@ const scoreContainer = document.getElementById("score");
 quizData.forEach((q, index) => {
   const div = document.createElement("div");
   div.className = "question";
-  div.innerHTML = `<h3>Question ${index + 1}: ${q.question}</h3>`;
+  div.innerHTML = `<h3>${q.question}</h3>`;
   q.options.forEach((opt, i) => {
     div.innerHTML += `<label><input type="radio" name="q${index}" value="${i}"> ${opt}</label>`;
   });
